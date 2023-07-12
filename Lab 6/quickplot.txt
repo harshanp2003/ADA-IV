@@ -1,0 +1,7 @@
+set title 'Quick  Plot'
+set xrange [0:1500]
+set yrange [10:12000]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'quickcount.txt' u 1:2 w lp,'quickcount.txt' u 3:4 w lp,'quickcount.txt' u 5:6 w lp

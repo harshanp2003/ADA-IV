@@ -1,0 +1,7 @@
+set title 'Best Case String Match Plot'
+set xrange [0:1000]
+set yrange [0:300000]
+set xlabel 'Input Size'
+set ylabel 'Basic Operation count'
+set style data linespoints
+plot 'SM.txt' u 3:4 w lp

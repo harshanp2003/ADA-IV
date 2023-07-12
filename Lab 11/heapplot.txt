@@ -1,0 +1,7 @@
+set title 'Heap  Plot'
+set xrange [10:100]
+set yrange [10:1000]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'heapcount.txt' u 1:2 w lp,'heapcount.txt' u 3 w lp,'heapcount.txt' u 4 w lp
