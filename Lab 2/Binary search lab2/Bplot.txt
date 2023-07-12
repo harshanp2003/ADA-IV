@@ -1,0 +1,7 @@
+set title 'Binary Plot'
+set xrange [1000:5000]
+set yrange [1:50]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'count.txt' u 1:2 w lp,'count.txt' u 3:4 w lp

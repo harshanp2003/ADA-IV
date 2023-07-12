@@ -1,0 +1,7 @@
+set title 'Insert Plot'
+set xrange [0:1500]
+set yrange [0:40000]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'insertion_time.txt' u 1:2 w lp,'insertion_time.txt' u 3:4 w lp,'insertion_time.txt' u 5:6 w lp

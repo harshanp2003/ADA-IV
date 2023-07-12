@@ -1,0 +1,7 @@
+set title 'gcd Plot'
+set xrange [0:10]
+set yrange [10:100]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'e_b.txt' u 1:2 w lp,'e_w.txt' u 1:2 w lp,'c_b.txt' u 1:2 w lp,'c_w.txt' u 1:2 w lp,'m_b.txt' u 1:2 w lp,'m_w.txt' u 1:2 w lp

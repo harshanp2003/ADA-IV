@@ -1,0 +1,7 @@
+set title 'bubble Plot'
+set xrange [0:40000]
+set yrange [0:40000]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'bubcount.txt' u 1:2 w lp,'bubcount.txt' u 3:4 w lp

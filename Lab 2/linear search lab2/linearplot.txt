@@ -1,0 +1,7 @@
+set title 'Linear Plot'
+set xrange [0:100]
+set yrange [0:30]
+set xlabel 'Input'
+set ylabel 'Count'
+set style data linespoints
+plot 'lineartime.txt' u 1:2 w lp,'lineartime.txt' u 3:4 w lp,'lineartime.txt' u 5:6 w lp
