@@ -5,7 +5,7 @@ int count;
 
 void Warshall(int M[n][n], int n)
 {
-    printf("\n Inside Warshall \n");
+   
     int i,j,k;
     int R[n][n];
     for (i=0;i<n;i++)
@@ -15,15 +15,7 @@ void Warshall(int M[n][n], int n)
             R[i][j]=M[i][j];
         }
     }
-    printf("R0 :\n");
-    for (i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            printf("%d ",R[i][j]);
-        }
-        printf("\n");
-    }
+   
     for(k=0;k<n;k++)
     {
         for(i=0;i<n;i++)
@@ -59,7 +51,7 @@ void main()
     FILE*f=fopen("Warshalls_data.txt","a");
     count=0;
     int i,j;
-    printf(" Welocme \n Enter the number of Vertices : ");
+    printf(" Enter the number of Vertices : ");
     scanf("%d",&n);
     int a[n][n];
     printf(" Enter the Adjacency Matrix : \n");
@@ -69,15 +61,6 @@ void main()
         {
             scanf("%d",&a[i][j]);
         }
-    }
-    printf("The Adjacency Matrix is : \n");
-    for (i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            printf("%d ",a[i][j]);   
-        }
-        printf("\n");
     }
     Warshall(a,n);
     fprintf(f,"%d\t%d",n,count);
