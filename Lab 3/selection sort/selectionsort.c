@@ -25,6 +25,7 @@ void main()
 {
     int n = 1, *a, count;
     FILE *fp;
+     fp = fopen("data.txt", "a");
     while (n < 40000)
     {
         if (n < 10000)
@@ -37,9 +38,8 @@ void main()
             a[i] = i;
         }
         count = SelectionSort(a, n);
-        fp = fopen("data.txt", "a");
-        fprintf(fp, "%d\t\t%d\n", n, count);
-        fclose(fp);
+       
+        fprintf(fp, "%d\t\t%d\n", n, count);   
     }
-    
+     fclose(fp);
 }
