@@ -15,12 +15,16 @@ void warshall(int a[n][n])
     {
         for (i = 1; i <= n; i++)
         {
+            count++;
             if(r[i][k]==1)
             {
               for (j = 1; j <= n; j++)
               {
                 count++;
-                r[i][j] = ( r[i][j] || (r[i][k] && r[k][j]));
+                  if(r[i][j]!=1)
+                  { 
+                     r[i][j] = ( r[i][k] && r[k][j]);
+                  }
               }
             }
            
