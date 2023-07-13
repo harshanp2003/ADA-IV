@@ -68,3 +68,9 @@ int main()
     checkdirected(a);
     return 0;
 }
+///Eg to be given
+4
+0 1 0 0
+0 0 0 1
+0 0 0 0
+1 0 1 0
