@@ -56,7 +56,7 @@ int merge(int b[], int c[], int a[], int n, int m)
             //j++;
         }
         //k++;
-        ct++;
+        ct++;//*Increment count only here
     }
     while (i < n)
     {
