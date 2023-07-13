@@ -50,3 +50,8 @@ int main()
     printf("Operation Count : %d\n", count);
     return 0;
 }
+///Eg to be given
+0 999 3 999
+2 0 999 999
+999 7 0 1
+6 999 999 0
