@@ -44,7 +44,7 @@ void main()
 {
     count=0;
     FILE *f;
-    f = fopen("bfstopo.txt", "a");
+    f = fopen("dfstopo.txt", "a");
     printf("Enter no of nodes\n");
     scanf("%d",&n);
     int a[n][n];
