@@ -47,28 +47,28 @@ int merge(int b[], int c[], int a[], int n, int m)
     {
         if (b[i] < c[j])
         {
-            a[k] = b[i];
-            i++;
+            a[k++] = b[i++];
+            //i++;
         }
         else
         {
-            a[k] = c[j];
-            j++;
+            a[k++] = c[j++];
+            //j++;
         }
-        k++;
+        //k++;
         ct++;
     }
     while (i < n)
     {
-        a[k] = b[i];
-        i++;
-        k++;
+        a[k++] = b[i++];
+       // i++;
+        //k++;
     }
     while (j < m)
     {
-        a[k] = c[j];
-        j++;
-        k++;
+        a[k++] = c[j++];
+        //j++;
+        //k++;
     }
     return ct;
 }
