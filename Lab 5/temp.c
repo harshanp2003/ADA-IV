@@ -43,7 +43,7 @@ void gen_worst_data(int a[], int l, int r)
 int merge(int b[], int c[], int a[], int n, int m)
 {
     int i = 0, j = 0, k = 0, ct = 0;
-    while (i < n && j < m)
+    while (i < n && j < m)   //blen=n,clen=m
     {
         if (b[i] < c[j])
         {
