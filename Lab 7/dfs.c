@@ -8,7 +8,7 @@ void dfs(int v)
     visited[v] = 1;
     for (i = v; i <= n; i++)
     {
-        if (a[v][i] && visited[i])
+        if (a[v][i] && visited[i]) //For checking acyclicity note 
         {
             acyclic = 0;
             printf("%d--%d\n", v, i);
@@ -30,7 +30,7 @@ void connectandcyclic()
             break;
         i++;
     }
-    if (i == n + 1)
+    if (i == n + 1) //Since count starts from 1 so here n+1
         printf("Graph is Connected\n");
     else
     {
