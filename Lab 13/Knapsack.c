@@ -12,7 +12,7 @@ void composition(int f[][c + 1], int w[])
     j = c;
     for (i = n; i >= 1; i--)
     {
-        if (f[i][j] != f[i - 1][j])
+        if (f[i][j] != f[i - 1][j])  //Means above and below elements of a row and it's previous row should be different.  
         {
             subset[num++] = i;
             j -= w[i];
