@@ -45,8 +45,9 @@ while(n<40000)
         // Best case already sorted array
         for (int i = 0; i < n; i++)
             *(arr + i) = i;
-        count = 0;
-	    count=insertionSort(arr,n,count);
+         count = 0;
+  	 count=insertionSort(arr,n,count);
+	count=1;
         fprintf(f, "%d\t%d\t", n, count);
         // printf("%d\t%d\n",n,count);
 
