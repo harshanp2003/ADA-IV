@@ -44,7 +44,7 @@ void checkdirected(int a[n][n])
     int flag = 0;
     for (i = 1; i <= n - 1; i++)
         for (j = i; j <= n; j++)
-            if (a[i][j] == 1 && a[j][i] == 1)
+            if (a[i][j] == 1 && a[j][i] == 1)//Checking for symmetry in matrix
             {
                 flag = 1;
                 break;
