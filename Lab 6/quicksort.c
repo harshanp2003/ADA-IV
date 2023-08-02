@@ -24,7 +24,7 @@ do{
      }while(arr[j]>pivot);
       swap(&arr[i],&arr[j]);
      }while(i<j);
-     swap(&arr[i],&arr[j]);
+     
      swap(&arr[beg],&arr[j]);
      return j;
 }
