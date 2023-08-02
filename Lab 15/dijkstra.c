@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include<stdlib.h>
+int ac=1;
 void dijkstra(int n, int cost[10][10], int s, int dist[10])
 {
     int i, v, count = 1, min, visited[10];
@@ -17,14 +18,16 @@ void dijkstra(int n, int cost[10][10], int s, int dist[10])
     while (count < n)
     {
         min = 999;
-
+        ac++;
         // finding the vertex with minimum distance
         for (i = 1; i <= n; i++)
         {
+            ac++;
             if (dist[i] < min && !visited[i])
             {
                 min = dist[i];
                 v = i;
+                
             }
         }
         visited[v] = 1;
@@ -36,13 +39,21 @@ void dijkstra(int n, int cost[10][10], int s, int dist[10])
                 dist[i] = dist[v] + cost[v][i];
         }
     }
+    printf("Acutal count:%d\n",ac);
+    
+    
 }
 
 void main()
 {
     int i, j, n, s, cost[10][10], dist[10]; // dist stores the distance from source vertex to the given vertex
     // cost matrix stores the cost of each edge(weight) and if no edge exists then the user enters 0, and is then converted to 999(which represents infinity)
-
+   int tc=4;
+   FILE *f=fopen("count.txt","a");
+    while(tc<=5)
+   { 
+        
+    
     printf("Enter the total number of nodes: ");
     scanf("%d", &n);
 
@@ -67,24 +78,10 @@ void main()
         if (s != i)
             printf("%d -> %d = %d\n", s, i, dist[i]); // Added newline character
     }
+    fprintf(f,"%d\t%d\n",tc,ac);
+    tc+=1;
+    ac=1;
+   }
+   fclose(f);
+    
 }
-
-// OUTPUT
-//  Enter the number of nodes
-//  7
-//  Enter the cost matrix
-//  0 2 6 0 0 0 0
-//  2 0 0 5 0 0 0
-//  6 0 0 8 0 0 0
-//  0 5 8 0 10 15 0
-//  0 0 0 10 0 6 2
-//  0 0 0 15 6 0 6
-//  0 0 0 0 2 6 0
-//  Enter the source node
-//  1
-//  0 -> 1 = 2
-//  0 -> 2 = 6
-//  0 -> 3 = 7
-//  0 -> 4 = 17
-//  0 -> 5 = 22
-//  0 -> 6 = 19
