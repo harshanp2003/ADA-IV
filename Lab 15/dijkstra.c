@@ -50,7 +50,7 @@ void main()
     // cost matrix stores the cost of each edge(weight) and if no edge exists then the user enters 0, and is then converted to 999(which represents infinity)
    int tc=4;
    FILE *f=fopen("count.txt","a");
-    while(tc<=5)
+    while(tc<=8)
    { 
         
     
